@@ -1,4 +1,8 @@
+import com.utils.cashier.Cashier;
+import com.utils.customer.Customer;
 import com.utils.randomGenerator.RandomGenerator;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +16,39 @@ public class Main {
         //mínimos requeridos y desarrolla los métodos necesarios para interactuar con la fila de
         //clientes.
 
+        boolean salir = false;
+        Scanner sc = new Scanner(System.in);
+        Cashier cashier = new Cashier(1);
 
+        while (!salir) {
+            System.out.println("Choose an option: \n" +
+                    "1.- Abrir caja \n" +
+                    "2.- Añadir un nuevo cliente a la cola\n" +
+                    "3.- Atender un cliente \n"+
+                    "4.- Ver clientes pendientes\n" +
+                    "5.- Cerrar supermercado");
+            String option = sc.nextLine();
+            switch (option) {
+                case "1":
+                    cashier.addCashier();
+                    System.out.println("There's a new chashier open");
+                    break;
+                case "2":
+                    Customer newCustomer = new Customer();
+                    cashier.setCustomerOnLine(newCustomer.getName());
+                    break;
+                case "3":
+                    cashier.attendCustomer();
+                    break;
+                case "4":
+                    cashier.ShowCashierInfo();
+                    break;
+                case "Q":
+                case "q":
+                    salir = true;
+            }
+
+        }
 
         //7. En la clase ejecutable del proyecto, implementa un menú que, con un solo cajero/a,
         //tenga las siguientes opciones:
@@ -32,16 +68,6 @@ public class Main {
         //2
         //8. Incluye documentación en tu proyecto en la que se indique la necesidad a partir de la
         //que surge el proyecto y una explicación de la funcionalidad del menú de usuario.
-        //9. [Reto opcional] Añade dos cajeros adicionales y modifica el menú de la clase
-        //ejecutable para que:
-        //• A la hora de crear un cliente, este se ponga automáticamente en la caja con menos
-        //personas esperando.
-        //• Atender un cliente hará que se atienda un cliente en cada caja.
-        //• Al ver clientes pendientes, se preguntará de qué caja, enseñando sus
-        //identificadores.
-        //• Las opciones de abrir y cerrar cajas deberán preguntar qué caja quiere abrir o
-        //cerrar. Cuando no queden cajas abiertas, se cierra el supermercado y el programa.
-
 
     }
 }

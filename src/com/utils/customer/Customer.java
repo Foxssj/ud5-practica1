@@ -7,17 +7,13 @@ import java.util.Stack;
 public class Customer {
     private String name;
     private int cantProducts;
-    private int currentProducts = 0;
+    private int currentProducts;
     private Stack<String> products;
 
-    public Customer(String name, int cantProducts) {
-        this.name = name;
-        this.cantProducts = cantProducts;
-    }
 
-    public Customer(int cantProducts) {
+    public Customer() {
         this.name = RandomGenerator.RandomPerson();
-        this.cantProducts = cantProducts;
+        this.cantProducts = (int) (Math.random() * 10);
     }
 
     public void addProduct() {

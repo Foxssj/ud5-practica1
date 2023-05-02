@@ -12,7 +12,7 @@ public class Cashier {
     //<Nombre cliente 1>
     //<Nombre cliente 2>
     private int totalCashiers;
-    private Stack<String> customersOnLine;
+    private Stack<String> customersOnLine = new Stack<>();
 
     public Cashier(int totalCashiers) {
         this.totalCashiers = totalCashiers;
@@ -21,28 +21,26 @@ public class Cashier {
     public void addCashier() {
         totalCashiers++;
     }
-    public void getCustomerOnLine(String person) {
+    public void setCustomerOnLine(String person) {
         customersOnLine.push(person);
         System.out.println(person + " has entered the line");
     }
 
     public void attendCustomer() {
         String person = customersOnLine.pop();
-        System.out.println(person + " has entered the line");
+        System.out.println(person + " has left the line");
     }
 
-    public String showCustomer() {
+    public String ShowCashierInfo() {
         String showedCustomers = "";
 
         for (int i = 0; i < customersOnLine.size(); i++) {
-            showedCustomers += customersOnLine.get(i) + ", \n";
+            showedCustomers += "* " +customersOnLine.get(i) + ", \n";
         }
-        return showedCustomers;
-    }
-    public String ShowCashierInfo() {
+
         return "* Número de cajas: "+ totalCashiers+"\n" +
                 "* Total de clientes: "+ customersOnLine.size() +"\n" +
                 "* Clientes en la fila:\n"
-                + "* " + showCustomer();
+                + "* " + showedCustomers;
     }
 }

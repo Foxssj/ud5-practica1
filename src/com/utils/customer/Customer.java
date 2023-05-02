@@ -8,7 +8,7 @@ public class Customer {
     private String name;
     private int cantProducts;
     private int currentProducts = 0;
-    private Stack<String>[] products;
+    private Stack<String> products;
 
     public Customer(String name, int cantProducts) {
         this.name = name;
@@ -23,12 +23,19 @@ public class Customer {
     public void addProduct() {
         if (currentProducts < cantProducts) {
             String someProduct = RandomGenerator.RandomProduct();
-            products[currentProducts].push(someProduct);
+            products.push(someProduct);
             System.out.println("You added a: " + someProduct);
         } else {
             System.out.println("The cart is full");
         }
+    }
 
+    public void removeProduct() {
+        if (currentProducts > 0) {
+            products.pop();
+        } else {
+            System.out.println("The cart is empty");
+        }
     }
 
 }

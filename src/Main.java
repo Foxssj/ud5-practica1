@@ -13,8 +13,7 @@ public class Main {
         //clientes.
         //6. Genera un mecanismo para que todas las clases dispongan de una representación
         //como cadena de texto que se asemeje a lo siguiente:
-        //Clie
-        //nte
+        //Cliente
         //===================================
         //* Nombre: <Nombre del cliente>
         //* Total de productos: <Número de productos>
@@ -22,8 +21,7 @@ public class Main {
         //<Nombre artículo 1>
         //<Nombre artículo 2>
         //===================================
-        //C
-        //ajero
+        //Cajero
         //===================================
         //* Número de caja: <Número de caja>:
         //* Total de clientes: <Número de clientes>

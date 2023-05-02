@@ -1,14 +1,10 @@
+import com.utils.randomGenerator.RandomGenerator;
+
 public class Main {
     public static void main(String[] args) {
         //1. Crea una estructura de paquetes adecuada para representar las entidades y utilidades
         //que participan en la simulación.
-        //2. Desarrolla una clase con un método estático que retorne un producto aleatorio. El
-        //array de productos disponibles estará en un atributo privado y estático, y tendrá, al
-        //menos, un total de doce productos.
-        //3. Añade también un método estático que retorne un nombre de persona aleatorio. El
-        //array de nombres disponibles estará en un atributo privado y estático, y tendrá, al
-        //menos, un total de veinte nombres.
-        //1
+
         //4. Implementa una clase que represente al cliente. En esta clase, considera los atributos
         //mínimos requeridos y desarrolla los métodos necesarios para interactuar con la cesta
         //de la compra.
@@ -62,5 +58,10 @@ public class Main {
         //identificadores.
         //• Las opciones de abrir y cerrar cajas deberán preguntar qué caja quiere abrir o
         //cerrar. Cuando no queden cajas abiertas, se cierra el supermercado y el programa.
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(RandomGenerator.RandomPerson());
+        }
+
     }
 }

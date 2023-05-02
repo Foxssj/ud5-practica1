@@ -59,9 +59,6 @@ public class Main {
         //• Las opciones de abrir y cerrar cajas deberán preguntar qué caja quiere abrir o
         //cerrar. Cuando no queden cajas abiertas, se cierra el supermercado y el programa.
 
-        for (int i = 0; i < 5; i++) {
-            System.out.println(RandomGenerator.RandomPerson());
-        }
 
     }
 }

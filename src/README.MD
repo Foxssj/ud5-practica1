@@ -1,5 +1,4 @@
-# Este proyecto surgió en base a la necesidad de gestionar cajeros y los clientes de un local,
-entonces se tuvo que crear este proyecto.
+# Este proyecto surgió en base a la necesidad de gestionar cajeros y los clientes de un local, entonces se tuvo que crear este proyecto.
 
 
 FUNCIONALIDADES:

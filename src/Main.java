@@ -11,24 +11,9 @@ public class Main {
         //5. Desarrolla una clase que represente al cajero/a. En esta clase, considera los atributos
         //mínimos requeridos y desarrolla los métodos necesarios para interactuar con la fila de
         //clientes.
-        //6. Genera un mecanismo para que todas las clases dispongan de una representación
-        //como cadena de texto que se asemeje a lo siguiente:
-        //Cliente
-        //===================================
-        //* Nombre: <Nombre del cliente>
-        //* Total de productos: <Número de productos>
-        //* Lista de artículos en la cesta:
-        //<Nombre artículo 1>
-        //<Nombre artículo 2>
-        //===================================
-        //Cajero
-        //===================================
-        //* Número de caja: <Número de caja>:
-        //* Total de clientes: <Número de clientes>
-        //* Clientes en la fila:
-        //<Nombre cliente 1>
-        //<Nombre cliente 2>
-        //===================================
+
+
+
         //7. En la clase ejecutable del proyecto, implementa un menú que, con un solo cajero/a,
         //tenga las siguientes opciones:
         //• Abrir caja: Permite al cajero/a abrir la caja para que puedan pasar clientes a hacer

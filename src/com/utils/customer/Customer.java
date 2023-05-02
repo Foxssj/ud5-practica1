@@ -38,4 +38,35 @@ public class Customer {
         }
     }
 
+    public String showProducts() {
+        String showedProducts = "";
+
+        for (int i = 0; i < cantProducts; i++) {
+            showedProducts += products.get(i) + ", \n";
+        }
+        return showedProducts;
+    }
+
+    public String ShowCustomerInfo() {
+        return "* Nombre: " + name +"\n" +
+                "* Total de productos: " + cantProducts +"\n" +
+                "* Lista de artículos en la cesta:\n" +
+                "* " + showProducts();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCantProducts() {
+        return cantProducts;
+    }
+
+    public void setCantProducts(int cantProducts) {
+        this.cantProducts = cantProducts;
+    }
 }

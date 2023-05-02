@@ -1,40 +1,55 @@
+import com.utils.cashier.Cashier;
+import com.utils.customer.Customer;
+import com.utils.randomGenerator.RandomGenerator;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         //1. Crea una estructura de paquetes adecuada para representar las entidades y utilidades
         //que participan en la simulación.
-        //2. Desarrolla una clase con un método estático que retorne un producto aleatorio. El
-        //array de productos disponibles estará en un atributo privado y estático, y tendrá, al
-        //menos, un total de doce productos.
-        //3. Añade también un método estático que retorne un nombre de persona aleatorio. El
-        //array de nombres disponibles estará en un atributo privado y estático, y tendrá, al
-        //menos, un total de veinte nombres.
-        //1
+
         //4. Implementa una clase que represente al cliente. En esta clase, considera los atributos
         //mínimos requeridos y desarrolla los métodos necesarios para interactuar con la cesta
         //de la compra.
         //5. Desarrolla una clase que represente al cajero/a. En esta clase, considera los atributos
         //mínimos requeridos y desarrolla los métodos necesarios para interactuar con la fila de
         //clientes.
-        //6. Genera un mecanismo para que todas las clases dispongan de una representación
-        //como cadena de texto que se asemeje a lo siguiente:
-        //Clie
-        //nte
-        //===================================
-        //* Nombre: <Nombre del cliente>
-        //* Total de productos: <Número de productos>
-        //* Lista de artículos en la cesta:
-        //<Nombre artículo 1>
-        //<Nombre artículo 2>
-        //===================================
-        //C
-        //ajero
-        //===================================
-        //* Número de caja: <Número de caja>:
-        //* Total de clientes: <Número de clientes>
-        //* Clientes en la fila:
-        //<Nombre cliente 1>
-        //<Nombre cliente 2>
-        //===================================
+
+        boolean salir = false;
+        Scanner sc = new Scanner(System.in);
+        Cashier cashier = new Cashier(1);
+
+        while (!salir) {
+            System.out.println("Choose an option: \n" +
+                    "1.- Abrir caja \n" +
+                    "2.- Añadir un nuevo cliente a la cola\n" +
+                    "3.- Atender un cliente \n"+
+                    "4.- Ver clientes pendientes\n" +
+                    "5.- Cerrar supermercado");
+            String option = sc.nextLine();
+            switch (option) {
+                case "1":
+                    cashier.addCashier();
+                    System.out.println("There's a new chashier open");
+                    break;
+                case "2":
+                    Customer newCustomer = new Customer();
+                    cashier.setCustomerOnLine(newCustomer.getName());
+                    break;
+                case "3":
+                    cashier.attendCustomer();
+                    break;
+                case "4":
+                    System.out.println(cashier.ShowCashierInfo());
+                    break;
+                case "Q":
+                case "q":
+                    salir = true;
+            }
+
+        }
+
         //7. En la clase ejecutable del proyecto, implementa un menú que, con un solo cajero/a,
         //tenga las siguientes opciones:
         //• Abrir caja: Permite al cajero/a abrir la caja para que puedan pasar clientes a hacer
@@ -53,14 +68,6 @@ public class Main {
         //2
         //8. Incluye documentación en tu proyecto en la que se indique la necesidad a partir de la
         //que surge el proyecto y una explicación de la funcionalidad del menú de usuario.
-        //9. [Reto opcional] Añade dos cajeros adicionales y modifica el menú de la clase
-        //ejecutable para que:
-        //• A la hora de crear un cliente, este se ponga automáticamente en la caja con menos
-        //personas esperando.
-        //• Atender un cliente hará que se atienda un cliente en cada caja.
-        //• Al ver clientes pendientes, se preguntará de qué caja, enseñando sus
-        //identificadores.
-        //• Las opciones de abrir y cerrar cajas deberán preguntar qué caja quiere abrir o
-        //cerrar. Cuando no queden cajas abiertas, se cierra el supermercado y el programa.
+
     }
 }

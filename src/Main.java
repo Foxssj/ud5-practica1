@@ -41,7 +41,7 @@ public class Main {
                     cashier.attendCustomer();
                     break;
                 case "4":
-                    cashier.ShowCashierInfo();
+                    System.out.println(cashier.ShowCashierInfo());
                     break;
                 case "Q":
                 case "q":
